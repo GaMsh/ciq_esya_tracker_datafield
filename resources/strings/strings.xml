@@ -1,0 +1,27 @@
+<strings>
+    <string id="AppName">Esya Tracker</string>
+    <string id="label">TX</string>
+    <string id="shortLabel">TX</string>
+    <string id="EndpointTitle">URL приёма ews</string>
+    <string id="TokenTitle">Bearer-токен</string>
+    <string id="TokenPrompt">Токен устройства из кабинета ews</string>
+    <string id="TxOkChart">Успешные отправки</string>
+    <string id="TxOkLabel">Успешные отправки</string>
+    <string id="TxFailChart">Ошибки отправки</string>
+    <string id="TxFailLabel">Ошибки отправки</string>
+    <string id="TxOkSession">Успешные отправки (итог)</string>
+    <string id="TxFailSession">Ошибки отправки (итог)</string>
+    <string id="CountUnits">шт</string>
+    <string id="PressureChartLabel">esya_ambient_pressure</string>
+    <string id="PressureDataLabel">esya_ambient_pressure</string>
+    <string id="PressureUnitsLabel">hPa</string>
+    <string id="BatteryChartLabel">esya_device_battery</string>
+    <string id="BatteryDataLabel">esya_device_battery</string>
+    <string id="BatteryUnitsLabel">%</string>
+    <string id="GpsChartLabel">esya_gps_quality</string>
+    <string id="GpsDataLabel">esya_gps_quality</string>
+    <string id="GpsUnitsLabel">0-4</string>
+    <string id="Version">Version 1.0.0</string>
+    <string id="NoToken">нет токена</string>
+    <string id="NoFix">нет GPS</string>
+</strings>

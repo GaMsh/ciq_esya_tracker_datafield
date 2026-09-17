@@ -1,0 +1,27 @@
+<strings>
+    <string id="AppName">Esya Tracker</string>
+    <string id="label">TX</string>
+    <string id="shortLabel">TX</string>
+    <string id="EndpointTitle">ews ingest URL</string>
+    <string id="TokenTitle">Bearer token</string>
+    <string id="TokenPrompt">Device token from the ews cabinet</string>
+    <string id="TxOkChart">Successful sends</string>
+    <string id="TxOkLabel">Successful sends</string>
+    <string id="TxFailChart">Failed sends</string>
+    <string id="TxFailLabel">Failed sends</string>
+    <string id="TxOkSession">Successful sends (total)</string>
+    <string id="TxFailSession">Failed sends (total)</string>
+    <string id="CountUnits">n</string>
+    <string id="PressureChartLabel">esya_ambient_pressure</string>
+    <string id="PressureDataLabel">esya_ambient_pressure</string>
+    <string id="PressureUnitsLabel">hPa</string>
+    <string id="BatteryChartLabel">esya_device_battery</string>
+    <string id="BatteryDataLabel">esya_device_battery</string>
+    <string id="BatteryUnitsLabel">%</string>
+    <string id="GpsChartLabel">esya_gps_quality</string>
+    <string id="GpsDataLabel">esya_gps_quality</string>
+    <string id="GpsUnitsLabel">0-4</string>
+    <string id="Version">Version 1.0.0</string>
+    <string id="NoToken">no token</string>
+    <string id="NoFix">no GPS</string>
+</strings>

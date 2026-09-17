@@ -1,0 +1,8 @@
+.DS_Store
+bin/
+*/bin/
+*.iq
+*.prg
+*.prg.debug.xml
+.idea
+.vscode

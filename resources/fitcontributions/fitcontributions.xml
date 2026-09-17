@@ -1,0 +1,34 @@
+<fitContributions>
+    <fitField id="0" displayInChart="true"
+        sortOrder="0" precision="0"
+        chartTitle="@Strings.TxOkChart" dataLabel="@Strings.TxOkLabel"
+        unitLabel="@Strings.CountUnits" fillColor="#3D85C6" />
+    <fitField id="1" displayInChart="true"
+        sortOrder="1" precision="0"
+        chartTitle="@Strings.TxFailChart" dataLabel="@Strings.TxFailLabel"
+        unitLabel="@Strings.CountUnits" fillColor="#CC4125" />
+    <fitField id="2" displayInChart="false" displayInActivitySummary="true"
+        sortOrder="2" precision="0"
+        dataLabel="@Strings.TxOkSession" unitLabel="@Strings.CountUnits" />
+        <fitField id="3" displayInChart="false" displayInActivitySummary="true"
+        sortOrder="3" precision="0"
+        dataLabel="@Strings.TxFailSession" unitLabel="@Strings.CountUnits" />
+    <fitField id="4" displayInChart="true"
+        sortOrder="4" precision="1"
+        chartTitle="@Strings.PressureChartLabel"
+        dataLabel="@Strings.PressureDataLabel"
+        unitLabel="@Strings.PressureUnitsLabel"
+        fillColor="#2E86AB" />
+    <fitField id="5" displayInChart="true"
+        sortOrder="5" precision="0"
+        chartTitle="@Strings.BatteryChartLabel"
+        dataLabel="@Strings.BatteryDataLabel"
+        unitLabel="@Strings.BatteryUnitsLabel"
+        fillColor="#6AA84F" />
+    <fitField id="6" displayInChart="true"
+        sortOrder="6" precision="0"
+        chartTitle="@Strings.GpsChartLabel"
+        dataLabel="@Strings.GpsDataLabel"
+        unitLabel="@Strings.GpsUnitsLabel"
+        fillColor="#E69138" />
+</fitContributions>
