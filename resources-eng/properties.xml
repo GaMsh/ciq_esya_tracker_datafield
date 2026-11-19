@@ -1,0 +1,6 @@
+<resources>
+    <properties>
+        <property id="appVersion" type="string">2.5.0</property>
+        <property id="aboutCopy" type="string">OsMo Tracker 2.5.0. © 2026 esya.ru / Traceya. FIT and live tracking: esya.ru/osmo. Garmin® is a trademark of Garmin Ltd.</property>
+    </properties>
+</resources>

@@ -2,7 +2,6 @@ import Toybox.Background;
 import Toybox.Lang;
 import Toybox.Sensor;
 import Toybox.System;
-import Toybox.Time;
 
 (:background)
 class EsyaTrackerTempDelegate extends System.ServiceDelegate {

@@ -1,0 +1,11 @@
+<resources>
+    <properties>
+        <property id="endpoint" type="string">https://esya.ru/</property>
+        <property id="onlineMode" type="boolean">false</property>
+        <property id="pairCode" type="string">—</property>
+        <property id="bearerToken" type="string">unset</property>
+        <property id="sendDuringPause" type="boolean">true</property>
+        <property id="displayUnits" type="number">0</property>
+        <property id="recordTemp" type="boolean">true</property>
+    </properties>
+</resources>

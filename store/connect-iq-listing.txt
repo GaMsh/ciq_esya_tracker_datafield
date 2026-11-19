@@ -1,0 +1,225 @@
+================================================================================
+OsMo Tracker — Connect IQ Store listing (v2.5.0)
+================================================================================
+
+App name
+  RU: OsMo Tracker
+  EN: OsMo Tracker
+
+--------------------------------------------------------------------------------
+Title (Connect IQ: maximum 50 characters; отдельного short description нет)
+--------------------------------------------------------------------------------
+
+RU (28 символов, до 50):
+ОсМо Трекер от Трейсеи + FIT
+
+EN (29 characters, up to 50):
+OsMo Tracker by Treyceya + FIT
+
+--------------------------------------------------------------------------------
+Full description
+--------------------------------------------------------------------------------
+
+===== RU =====
+
+OsMo Tracker — поле данных Connect IQ для пользователей Трейсеи (esya.ru). Добавьте его на страницу активности Garmin: на экране — датчики и статусы, в .FIT — дополнительные ряды для разбора после финиша; в режиме Online — живой трекинг в Трейсею.
+
+Режимы
+• Офлайн (по умолчанию) — координаты в сеть не уходят; во время записи пишутся FIT-ряды для загрузки в esya. На экране — «offline».
+• Online — галочка в настройках Connect. Поле само получает гостевой токен; код привязки смотрите в настройках поля и введите на https://esya.ru/pair (нужна версия ≥2.4.0). Точки уходят на https://esya.ru/osmo.
+
+Инструкция и API: https://esya.ru/osmo (также в группе «О поле»).
+
+Подходит для Edge, часов (fēnix, Forerunner, Venu и др.) и навигаторов с Connect IQ 3.1+.
+
+Что уходит в Трейсею (онлайн)
+• координаты, высота, скорость, курс, оценка точности GPS;
+• температура (датчик устройства или Garmin Tempe), атмосферное давление, заряд батареи.
+
+На экране
+• до старта: «старт» (один раз после загрузки приложения — версия поля мелким шрифтом); офлайн — «offline», online без сессии — «online»;
+• на паузе: «на паузе» крупно, счётчик отправок мелко (в офлайне мелко — «offline»);
+• во время записи (онлайн): крупный счётчик отправок (цвет меняется каждые 3600 успешных точек);
+• если качество GPS ниже 4: вместо крупного счётчика — статус GPS, счётчик мелко, как на паузе:
+  — 3: «gps стал хуже»;
+  — 2: «gps возможно заглушен»;
+  — 1 или 0: «нет данных gps»;
+• температура датчика; при доступной погоде Garmin — разница датчик минус погода в скобках (например +15° пог. = датчик теплее прогноза);
+• давление и высота в скобках;
+• скорость и ветер из погоды Garmin:
+  — при скорости движения от 8 км/ч и выше и известном курсе: встр / встр бок / бок / бок попут / попут + сила, м/с;
+  — до старта, без курса или при скорости ниже 8 км/ч: румб (на часах С/ЮЗ…, на навигаторах сев/юг-зап…) + сила;
+  — прогнозный ветер слабее 0.5 м/с: «штиль» без направления;
+• зрители трансляции (онлайн);
+• ошибки связи / токена текстом (нет телефона, нет интернета, нет доступа и т.п.).
+На круглых экранах датчики укладываются компактно по центру с учётом ширины по дуге.
+
+После тренировки (FIT)
+• esya_tx_fail — ошибки отправки (только онлайн);
+• esya_ambient_pressure — давление, hPa;
+• esya_device_battery — заряд, %;
+• esya_gps_quality — качество GPS 0–4;
+• esya_viewers — зрители;
+• esya_temp_c — температура датчика, °C;
+• esya_weather_temp_delta_c — датчик минус погода Garmin, °C; T_погода = esya_temp_c минус delta;
+• esya_wind_type — тип ветра от −2 до 2 (встречный → попутный; пишется при относительном режиме);
+• esya_wind_speed — скорость ветра, м/с.
+
+Настройки Connect IQ
+• «Режим Online» (по умолчанию выкл.);
+• «Код привязки к аккаунту» — шестизначный код для esya.ru/pair (в приложении Connect IQ после синхронизации с устройством);
+• «Отправлять точки во время паузы» (по умолчанию вкл., только Online, полный пакет раз в 60 с);
+• «Записывать температуру» (по умолчанию вкл.) — экран, FIT и онлайн; выкл., если не нужна;
+• «О поле» — версия, копирайт и ссылка esya.ru/osmo (только просмотр).
+
+После серии HTTP 401/403 при включённом Online поле тихо получает новый гостевой токен.
+
+Как начать
+1. Установите поле и добавьте на экран активности.
+2. Для онлайна включите «Режим Online», откройте настройки поля и введите код на esya.ru/pair.
+3. Держите рядом телефон с Garmin Connect.
+4. Запустите активность. Без Online — только FIT.
+
+Нужен аккаунт Трейсеи для онлайн-трекинга. Поле не заменяет штатную запись Garmin.
+
+Разрешения: связь, GPS, датчики и фоновый опрос температуры, FitContributor.
+
+===== EN =====
+
+OsMo Tracker is a Connect IQ data field for Traceya (esya.ru). Add it to a Garmin activity page: live sensor status on screen, extra .FIT series after the ride, and optional live tracking to Traceya in Online mode.
+
+Modes
+• Offline (default) — nothing is uploaded; FIT series are still written while recording for later upload to esya. Screen shows “offline”.
+• Online — enable the checkbox in Connect settings. The field obtains a guest token itself; see the bind code in field settings and enter it at https://esya.ru/pair (requires version ≥2.4.0). Points go to https://esya.ru/osmo.
+
+Docs and API: https://esya.ru/osmo (also in the About group).
+
+Works on Edge, watches (fēnix, Forerunner, Venu, and more), and handhelds with Connect IQ 3.1+.
+
+Sent to Traceya (online)
+• coordinates, elevation, speed, heading, GPS accuracy;
+• temperature (device sensor or Garmin Tempe), barometric pressure, battery.
+
+On screen
+• before start: “start” (once after app load, field version in small type); offline shows “offline”, Online without a session shows “online”;
+• paused: “paused” large, send count small (offline: “offline” small);
+• recording (online): large successful-send counter (color shifts every 3600 OK points);
+• if GPS quality is below 4: GPS status large instead of the counter, send count small (like pause):
+  — 3: GPS degraded;
+  — 2: GPS may be jammed;
+  — 1 or 0: no GPS data;
+• sensor temperature; when Garmin weather is available — sensor minus weather delta in parentheses (e.g. +15° wx = sensor warmer than forecast);
+• pressure with elevation in parentheses;
+• speed and Garmin weather wind:
+  — ground speed 8 km/h or higher with heading: head / head-cross / cross / cross-tail / tail + m/s;
+  — before start, no heading, or speed below 8 km/h: compass (N/SW… on watches; longer labels on navigators) + m/s;
+  — forecast wind under 0.5 m/s: “calm” with no direction;
+• live viewers (online);
+• connection / token errors as text.
+Round displays use a compact centered layout with chord-aware width.
+
+After the ride (FIT)
+• esya_tx_fail — failed sends (online only);
+• esya_ambient_pressure — pressure, hPa;
+• esya_device_battery — battery, %;
+• esya_gps_quality — GPS quality 0–4;
+• esya_viewers — viewers;
+• esya_temp_c — sensor temperature, °C;
+• esya_weather_temp_delta_c — sensor minus Garmin weather, °C; T_weather = esya_temp_c minus delta;
+• esya_wind_type — wind type from −2 to 2 (head → tail; relative mode only);
+• esya_wind_speed — wind speed, m/s.
+
+Connect IQ settings
+• “Online mode” (off by default);
+• “Account bind code” — six-digit code for esya.ru/pair (in the Connect IQ app after the device syncs);
+• “Send points while paused” (on by default, Online only, full packet every 60 s);
+• “Record temperature” (on by default) — screen, FIT, and online; turn off if you do not want it;
+• “About” — version, copyright, and esya.ru/osmo (view only).
+
+After a run of HTTP 401/403 while Online is on, the field quietly obtains a new guest token.
+
+Getting started
+1. Install the field and add it to an activity page.
+2. For live tracking, enable Online mode, open field settings, and enter the code at esya.ru/pair.
+3. Keep a phone with Garmin Connect nearby.
+4. Start the activity. Without Online — FIT only.
+
+A Traceya account is required for online tracking. This field does not replace Garmin’s own recording.
+
+Permissions: communications, GPS, sensors and background temperature sampling, FitContributor.
+
+--------------------------------------------------------------------------------
+Changelog / What’s new
+--------------------------------------------------------------------------------
+
+===== RU =====
+
+2.5.0
+• Регистрация устройства: POST /api/device/register (прод больше не принимает GET).
+
+2.4.7
+• Без права Sensor History; в офлайне в FIT нет зрителей и ошибок отправки; счётчик точек сбрасывается между занятиями.
+• Online после старта в офлайне — подсказка «перезапустите занятие»; фон при плохом GPS: жёлтый→оранжевый→красный по времени.
+
+2.4.6
+• Счётчик зрителей: устойчивый разбор ответа /osmo; не сбрасывается, если ключ viewers не пришёл.
+
+2.4.5
+• Температура снова с датчика прибора (и Tempe, если спарен); галочка «Записывать температуру»; тап: м/с·м·mmHg·°C ↔ узлы·футы·hPa·°F.
+
+2.4.4
+• Короче копирайт в настройках; отдельное поле версии (без залипания старого текста).
+
+2.4
+• Offline/Online; гостевой токен и код на esya.ru/pair; тап меняет м/с·м·mmHg·°C ↔ узлы·футы·hPa·°F.
+
+2.3
+• Имя OsMo Tracker; ветер и GPS-статусы на экране; единицы (м/с|узлы, °C|°F); баннер новой версии; без устройств с лимитом 32 КБ.
+
+2.2
+• Компактный макет (круглые часы, Edge); FIT-ряды для разбора в Трейсее; отправка на паузе.
+
+2.1
+• Ветер из погоды Garmin на экране и в FIT; высота рядом с давлением.
+
+2.0
+• Часы и навигаторы; статусы связи и счётчик отправок на экране.
+
+1.0
+• Первый релиз: отправка точек в Трейсею, Bearer-токен, базовые FIT-ряды.
+
+===== EN =====
+
+2.5.0
+• Device registration: POST /api/device/register (production no longer accepts GET).
+
+2.4.7
+• No Sensor History permission; offline FIT omits viewers and send failures; send counter resets between activities.
+• Enabling Online after an offline start shows “restart activity”; poor GPS background ramps yellow→orange→red over time.
+
+2.4.6
+• Viewer count: robust /osmo parse; keeps the last value if the viewers key is missing.
+
+2.4.5
+• Temperature from the device sensor again (Tempe if paired); “Record temperature” checkbox; tap toggles m/s·m·mmHg·°C ↔ kn·ft·hPa·°F.
+
+2.4.4
+• Shorter copyright in settings; dedicated version field (avoids sticky old text).
+
+2.4
+• Offline/Online; guest token and bind code at esya.ru/pair; tap toggles m/s·m·mmHg·°C ↔ kn·ft·hPa·°F.
+
+2.3
+• Renamed OsMo Tracker; wind and GPS status on screen; units (m/s|knots, °C|°F); update banner; dropped 32 KB devices.
+
+2.2
+• Compact layouts (round watches, Edge); FIT series for Traceya analysis; send while paused.
+
+2.1
+• Garmin weather wind on screen and in FIT; elevation next to pressure.
+
+2.0
+• Watches and handhelds; connection statuses and send counter on screen.
+
+1.0
+• Initial release: Traceya uploads, Bearer token, basic FIT series.

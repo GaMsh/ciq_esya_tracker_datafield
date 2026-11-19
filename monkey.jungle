@@ -1,1 +1,7 @@
 project.manifest = manifest.xml
+devicesPath = "/home/gam/.Garmin/ConnectIQ/Devices"
+base.resourcePath = resources
+base.excludeAnnotations = edge1050
+edge1050.excludeAnnotations = other_token
+edge1050.resourcePath = resources;resources-edge1050
+

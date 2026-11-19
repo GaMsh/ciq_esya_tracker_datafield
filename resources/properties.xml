@@ -1,12 +1,46 @@
 <resources>
     <properties>
         <property id="endpoint" type="string">https://esya.ru/</property>
-        <property id="bearerToken" type="string"></property>
+        <property id="onlineMode" type="boolean">false</property>
+        <property id="pairCode" type="string">—</property>
+        <property id="bearerToken" type="string">unset</property>
+        <property id="sendDuringPause" type="boolean">true</property>
+        <property id="displayUnits" type="number">0</property>
+        <property id="recordTemp" type="boolean">true</property>
+        <property id="appVersion" type="string">2.5.0</property>
+        <property id="aboutCopy" type="string">OsMo Tracker 2.5.0. © 2026 esya.ru / Трейсея. FIT и онлайн-трекинг: esya.ru/osmo. Garmin® — торговая марка Garmin Ltd.</property>
+        <property id="aboutUrl" type="string">https://esya.ru/osmo</property>
     </properties>
 
     <settings>
-        <setting propertyKey="@Properties.bearerToken" title="@Strings.TokenTitle" prompt="@Strings.TokenPrompt">
-            <settingConfig type="alphaNumeric" maxLength="80" />
+        <setting propertyKey="@Properties.onlineMode" title="@Strings.OnlineModeTitle">
+            <settingConfig type="boolean" />
         </setting>
+        <setting propertyKey="@Properties.pairCode" title="@Strings.PairCodeTitle" prompt="@Strings.PairCodePrompt">
+            <settingConfig type="alphaNumeric" readonly="true" maxLength="80" />
+        </setting>
+        <setting propertyKey="@Properties.sendDuringPause" title="@Strings.SendDuringPauseTitle">
+            <settingConfig type="boolean" />
+        </setting>
+        <setting propertyKey="@Properties.displayUnits" title="@Strings.DisplayUnitsTitle">
+            <settingConfig type="list">
+                <listEntry value="0">@Strings.DisplayUnitsMetric</listEntry>
+                <listEntry value="1">@Strings.DisplayUnitsNautical</listEntry>
+            </settingConfig>
+        </setting>
+        <setting propertyKey="@Properties.recordTemp" title="@Strings.RecordTempTitle">
+            <settingConfig type="boolean" />
+        </setting>
+        <group id="about" title="@Strings.AboutGroupTitle" description="@Strings.AboutGroupDescription">
+            <setting propertyKey="@Properties.appVersion" title="@Strings.AppVersionTitle">
+                <settingConfig type="alphaNumeric" readonly="true" maxLength="16" />
+            </setting>
+            <setting propertyKey="@Properties.aboutCopy" title="@Strings.AboutNoticeTitle" prompt="@Strings.AboutNoticePrompt">
+                <settingConfig type="alphaNumeric" readonly="true" maxLength="512" />
+            </setting>
+            <setting propertyKey="@Properties.aboutUrl" title="@Strings.AboutUrlTitle" prompt="@Strings.AboutUrlPrompt">
+                <settingConfig type="url" readonly="true" />
+            </setting>
+        </group>
     </settings>
 </resources>

@@ -1,18 +1,8 @@
 <fitContributions>
-    <fitField id="0" displayInChart="true"
-        sortOrder="0" precision="0"
-        chartTitle="@Strings.TxOkChart" dataLabel="@Strings.TxOkLabel"
-        unitLabel="@Strings.CountUnits" fillColor="#3D85C6" />
     <fitField id="1" displayInChart="true"
         sortOrder="1" precision="0"
         chartTitle="@Strings.TxFailChart" dataLabel="@Strings.TxFailLabel"
         unitLabel="@Strings.CountUnits" fillColor="#CC4125" />
-    <fitField id="2" displayInChart="false" displayInActivitySummary="true"
-        sortOrder="2" precision="0"
-        dataLabel="@Strings.TxOkSession" unitLabel="@Strings.CountUnits" />
-        <fitField id="3" displayInChart="false" displayInActivitySummary="true"
-        sortOrder="3" precision="0"
-        dataLabel="@Strings.TxFailSession" unitLabel="@Strings.CountUnits" />
     <fitField id="4" displayInChart="true"
         sortOrder="4" precision="1"
         chartTitle="@Strings.PressureChartLabel"
@@ -31,4 +21,34 @@
         dataLabel="@Strings.GpsDataLabel"
         unitLabel="@Strings.GpsUnitsLabel"
         fillColor="#E69138" />
+    <fitField id="7" displayInChart="true"
+        sortOrder="7" precision="0"
+        chartTitle="@Strings.ViewersChartLabel"
+        dataLabel="@Strings.ViewersDataLabel"
+        unitLabel="@Strings.ViewersUnitsLabel"
+        fillColor="#8E44AD" />
+    <fitField id="8" displayInChart="true"
+        sortOrder="8" precision="1"
+        chartTitle="@Strings.TempChartLabel"
+        dataLabel="@Strings.TempDataLabel"
+        unitLabel="@Strings.TempUnitsLabel"
+        fillColor="#E74C3C" />
+    <fitField id="9" displayInChart="true"
+        sortOrder="9" precision="1"
+        chartTitle="@Strings.WeatherTempDeltaChart"
+        dataLabel="@Strings.WeatherTempDeltaLabel"
+        unitLabel="@Strings.TempUnitsLabel"
+        fillColor="#9B59B6" />
+    <fitField id="10" displayInChart="true"
+        sortOrder="10" precision="0"
+        chartTitle="@Strings.WindTypeChartLabel"
+        dataLabel="@Strings.WindTypeDataLabel"
+        unitLabel="@Strings.WindTypeUnitsLabel"
+        fillColor="#16A085" />
+    <fitField id="11" displayInChart="true"
+        sortOrder="11" precision="1"
+        chartTitle="@Strings.WindSpeedChartLabel"
+        dataLabel="@Strings.WindSpeedDataLabel"
+        unitLabel="@Strings.WindSpeedUnitsLabel"
+        fillColor="#1ABC9C" />
 </fitContributions>
